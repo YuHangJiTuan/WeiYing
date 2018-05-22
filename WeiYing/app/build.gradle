@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.bwie.wangkui.weiying"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //OKHttp依赖
+    implementation 'com.squareup.okio:okio:1.7.0'
+    //网络请求数据
+    implementation 'com.squareup.okhttp3:okhttp:3.4.0'
+
+//日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //Logger日志打印
+    implementation 'com.orhanobut:logger:2.1.1'
+//RecyclerView
+    implementation 'com.android.support:recyclerview-v7:27+'
+//图片加载框架picasso
+    implementation 'com.squareup.picasso:picasso:2.5.1'
+//图片加载框架glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+//图片加载框架fresco
+    implementation 'com.facebook.fresco:fresco:0.9.0'
+
+//EventBus通讯
+    implementation 'org.greenrobot:eventbus:3.0.0'
+//控件查找butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+//TabLayout
+    implementation "com.android.support:design:27.+"
+//Banner
+    implementation 'com.youth.banner:banner:1.4.9'
+//网络请求框架Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.0.1'
+//资源转换 与Retrofit一起用
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //权限申请
+    implementation 'me.weyye.hipermission:library:1.0.3'
+    //RxJava2.0
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.0-RC3'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0-RC3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.0-RC1'
+    //bottomBar
+    implementation 'com.hjm:BottomTabBar:1.1.3'
+}
